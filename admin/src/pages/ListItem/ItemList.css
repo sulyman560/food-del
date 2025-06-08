@@ -1,0 +1,30 @@
+.list-table-format{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid rgb(212, 195, 195);
+    font-size: 15px;
+}
+.list-table-format.title{
+    background-color: rgb(233, 233, 233);
+}
+.list-table-format img{
+    width: 50px;
+}
+.title-p{
+    color: rgb(100, 100, 100);
+    font-size: 18px;
+    font-weight: 500;
+}
+.list-table-format b{
+    color: rgb(104, 104, 104);
+}
+.list-table-format p{
+    color: rgb(129, 129, 129);
+}
+.list-table-format .remove{
+    color: red;
+    cursor: pointer;
+}
