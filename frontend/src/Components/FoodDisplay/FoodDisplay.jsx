@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import './FoodDisplay.css'
 import { StoreContext } from '../../Context/StoreContext'
 import FoodItem from '../FoodItem/FoodItem'
 import axios from 'axios';
 const FoodDisplay = ({ category }) => {
+ const {getTotal,token,cartItem,url,items} = useContext(StoreContext)
   const [items, setItems] = useState([]);
   const fetchList = async () => {
-    const response = axios.get('http://localhost:5000/api/items')
+    const response = axios.get(url+'/api/items')
       .then(res => {
         setItems(res.data);
       })
