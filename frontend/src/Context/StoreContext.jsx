@@ -10,7 +10,7 @@ const StoreContextProvider = (props) => {
     const [token, setToken] = useState("")
     const [food_list, setFoodList] = useState([])
     const fetchFoodList = async () => {
-        const response = await axios.get(url + "/api/items/");
+        const response = await axios.get("http://localhost:5000/api/items/");
         setFoodList(response.data.data)
     }
 
@@ -28,7 +28,7 @@ const StoreContextProvider = (props) => {
     const removeFromCart = async(itemId) => {
         setCartItem((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
         if (token) {
-            await axios.post(url+"/api/cart/removeCart",{itemId},{headers:{token}})
+            await axios.post("http://localhost:5000/api/cart/removeCart",{itemId},{headers:{token}})
         }
     }
 
