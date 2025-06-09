@@ -32,6 +32,6 @@ app.use('/api/order',orderRoute);
 // Static route to access uploaded files
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
