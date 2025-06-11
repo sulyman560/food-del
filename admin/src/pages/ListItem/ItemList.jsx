@@ -41,7 +41,7 @@ function ItemList() {
         {
           items.map(item => (
             <div className="list-table-format">
-              <img src={`http://localhost:5000/` + item.fileName} alt="" />
+              <img src={`https://food-del-backend-czhf.onrender.com/` + item.fileName} alt="" />
               <p>{item.name}</p>
               <p>${item.price}</p>
               <p>{item.category}</p>
