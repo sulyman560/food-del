@@ -4,7 +4,8 @@ import { StoreContext } from '../../Context/StoreContext'
 import FoodItem from '../FoodItem/FoodItem'
 import axios from 'axios';
 const FoodDisplay = ({ category }) => {
- const {getTotal,token,cartItem,url,items} = useContext(StoreContext)
+ const {getTotal,token,cartItem,url} = useContext(StoreContext)
+ const [items, setItems] = useState([]);
   const fetchList = async () => {
     const response = axios.get('https://food-del-backend-czhf.onrender.com/api/items')
       .then(res => {
