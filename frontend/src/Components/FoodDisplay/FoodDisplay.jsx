@@ -6,7 +6,7 @@ import axios from 'axios';
 const FoodDisplay = ({ category }) => {
  const {getTotal,token,cartItem,url,items} = useContext(StoreContext)
   const fetchList = async () => {
-    const response = axios.get(url+'/api/items')
+    const response = axios.get('https://food-del-backend-czhf.onrender.com/api/items')
       .then(res => {
         setItems(res.data);
       })
