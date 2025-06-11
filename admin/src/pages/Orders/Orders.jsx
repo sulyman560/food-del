@@ -7,12 +7,12 @@ import './Orders.css'
 const Orders = () => {
   const [data, setData] = useState([])
   const fetchOrders = async () => {
-    const response = await axios.get("http://localhost:5000/api/order/orderList");
+    const response = await axios.get("https://food-del-backend-czhf.onrender.com/api/order/orderList");
     setData(response.data.data);
     console.log(response.data.data);
   }
   const statusHandlar = async(event,orderId) => {
-    const response = await axios.post('http://localhost:5000/api/order/updateStatus',{
+    const response = await axios.post('https://food-del-backend-czhf.onrender.com/api/order/updateStatus',{
       orderId,
       status:event.target.value
     })
