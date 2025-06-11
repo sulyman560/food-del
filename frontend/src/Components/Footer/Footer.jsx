@@ -11,7 +11,7 @@ const Footer = () => {
           <img src={assets.logo} alt="" />
           <p>Bangladesh’s leading food delivery app with over 5000+ restaurants along with amazing deals</p>
           <div className='social-icons'>
-            <img src={assets.facebook_icon} alt="" />
+            <a href='https://www.facebook.com/sulyman.ahammad/'><img src={assets.facebook_icon} alt="" /></a>
             <img src={assets.twitter_icon} alt="" />
             <img src={assets.linkedin_icon} alt="" />
           </div>
