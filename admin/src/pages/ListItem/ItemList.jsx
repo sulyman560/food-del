@@ -12,7 +12,7 @@ function ItemList() {
       }
   }
   const fetchList = async() => {
-    const response = axios.get('http://localhost:5000/api/items')
+    const response = axios.get('https://food-del-backend-czhf.onrender.com/api/items')
       .then(res => {
         setItems(res.data);
       })
