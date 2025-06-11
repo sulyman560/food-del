@@ -29,6 +29,7 @@ const Footer = () => {
           <h2>GET IN TOUCH</h2>
           <p>01967-106291</p>
           <p>sulyman560@gmail.com</p>
+          <a href="https://sulyman.unaux.com/">Website</a>
         </div>
       </div>
       <br />
