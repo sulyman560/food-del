@@ -22,7 +22,7 @@ const StoreContextProvider = (props) => {
             setCartItem((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
         }
         if (token) {
-            await axios.post(url+"/api/cart/addCart",{itemId},{headers:{token}})
+            await axios.post("https://food-del-backend-czhf.onrender.com/api/cart/addCart",{itemId},{headers:{token}})
         }
     }
     const removeFromCart = async(itemId) => {
@@ -45,7 +45,7 @@ const StoreContextProvider = (props) => {
     }
         const [items, setItems] = useState([]);
         const fetchList = async() => {
-        const response = axios.get(url+'api/items')
+        const response = axios.get('https://food-del-backend-czhf.onrender.com/api/items')
           .then(res => {
             setItems(res.data);
           })
@@ -64,7 +64,7 @@ const StoreContextProvider = (props) => {
             return totalAmount;
         }
         const loadCartData = async(token) => {
-            const response = await axios.post(url+"/api/cart/getCart",{},{headers:{token}})
+            const response = await axios.post("https://food-del-backend-czhf.onrender.com/api/cart/getCart",{},{headers:{token}})
             setCartItem(response.data.cartData);
         }
     useEffect(() => {
