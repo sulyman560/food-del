@@ -10,7 +10,7 @@ const cartRoute = require('./routes/cartRoute.js')
 const orderRoute = require('./routes/orderRoute.js')
 require('dotenv').config();
 
-const PORT = process.env.PORT || 5000;
+const PORT = 10000;
 
 const app = express();
 app.use(cors());
