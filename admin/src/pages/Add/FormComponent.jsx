@@ -34,7 +34,7 @@ function FormComponent() {
 
 
     try {
-      const response = await axios.post('http://localhost:5000/api/items/form', data, {
+      const response = await axios.post('https://food-del-backend-czhf.onrender.com/api/items/form', data, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
