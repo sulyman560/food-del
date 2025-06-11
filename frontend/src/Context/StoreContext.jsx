@@ -6,7 +6,7 @@ export const StoreContext = createContext(null)
 
 const StoreContextProvider = (props) => {
     const [cartItem, setCartItem] = useState({});
-    const url = "https://food-del-backend-jcpg.onrender.com"
+    const url = "https://food-del-backend-czhf.onrender.com"
     const [token, setToken] = useState("")
     const [food_list, setFoodList] = useState([])
     const fetchFoodList = async () => {
@@ -45,7 +45,7 @@ const StoreContextProvider = (props) => {
     }
         const [items, setItems] = useState([]);
         const fetchList = async() => {
-        const response = axios.get('http://localhost:5000/api/items')
+        const response = axios.get(url+'api/items')
           .then(res => {
             setItems(res.data);
           })
