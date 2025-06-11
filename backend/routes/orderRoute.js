@@ -46,7 +46,7 @@ router.post('/create-checkout-session', async (req, res) => {
 });
 
 router.post('/place', authMiddleware, async (req, res) => {
-  const frontend_url = "https://food-del-frontend2-ogu1.onrender.com"
+  const frontend_url = "https://food-del-frontend1-5l6a.onrender.com"
   try {
     const { userId, items, amount, address } = req.body;
     const newOrder = new orderModel({
