@@ -5,7 +5,6 @@ import FoodItem from '../FoodItem/FoodItem'
 import axios from 'axios';
 const FoodDisplay = ({ category }) => {
  const {getTotal,token,cartItem,url,items} = useContext(StoreContext)
-  const [items, setItems] = useState([]);
   const fetchList = async () => {
     const response = axios.get(url+'/api/items')
       .then(res => {
