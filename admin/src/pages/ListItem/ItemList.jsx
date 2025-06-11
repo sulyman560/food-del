@@ -5,7 +5,7 @@ import './ItemList.css'
 function ItemList() {
   const [items, setItems] = useState([]);
   const removeItem = async(id) => {
-    const response = await axios.post(`http://localhost:5000/api/items/delete`,{id:id})
+    const response = await axios.post(`https://food-del-backend-czhf.onrender.com/api/items/delete`,{id:id})
     await fetchList();
     if(response.data.success){
       toast.success(response.data.message)  
