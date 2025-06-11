@@ -25,17 +25,14 @@ const FoodDisplay = ({ category }) => {
     <div className='foodDisplay'>
       <h2>Top dishes near you</h2>
       <div className="foodDisplay-list">
-         {
-          items.map(item => (
-            <div className="list-table-format">
-              <img src={`https://food-del-backend-czhf.onrender.com/` + item.fileName} alt="" />
-              <p>{item.name}</p>
-              <p>${item.price}</p>
-              <p>{item.category}</p>
-              <p onClick={()=>removeItem(item._id)} className='remove'>X</p>
-            </div>
-               ))
-        }  
+         {items.map((item, index) => {
+          {console.log(category,item.category);}
+          if (category === "All" || category === item.category) {
+            return (
+              <FoodItem key={index} id={item._id} name={item.name} price={item.price} description={item.description} category={item.category} image={item.fileName} />
+            )
+          }
+        })}
         
       </div>
 
