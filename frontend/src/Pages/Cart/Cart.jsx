@@ -10,7 +10,7 @@ const Cart = () => {
 
    const [items, setItems] = useState([]);
     const fetchList = async() => {
-    const response = axios.get('http://localhost:5000/api/items')
+    const response = axios.get('https://food-del-backend-czhf.onrender.com/api/items')
       .then(res => {
         setItems(res.data);
       })
@@ -40,7 +40,7 @@ const Cart = () => {
               return (
                 <>
                   <div className='cart-item-content'>
-                    <img src={`http://localhost:5000/` + item.fileName} alt="" />
+                    <img src={`https://food-del-backend-czhf.onrender.com/` + item.fileName} alt="" />
                     <p>{item.name}</p>
                     <p>${item.price}</p>
                     <p>{cartItem[item._id]}</p>
