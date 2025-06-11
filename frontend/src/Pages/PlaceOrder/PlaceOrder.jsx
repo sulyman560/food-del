@@ -47,7 +47,7 @@ const PlaceOrder = () => {
     items:orderItems,
     amount:getTotal()+2,
    }
-    const response = await axios.post(url+"/api/order/place",orderData,{headers:{token}});
+    const response = await axios.post("https://food-del-backend-czhf.onrender.com/api/order/place",orderData,{headers:{token}});
     
     if (response.data.success) {
       const {session_url} = response.data;
