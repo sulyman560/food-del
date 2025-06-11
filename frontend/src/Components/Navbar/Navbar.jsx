@@ -15,7 +15,7 @@ const Navbar = ({setShowLogin}) => {
 
   return (
     <div className='navbar'>
-      <a href="index.html">
+      <a href="https://food-del-frontend1-5l6a.onrender.com">
       <img className='logo' src={assets.logo} alt="" />
       </a>
       
