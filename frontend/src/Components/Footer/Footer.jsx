@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="footer-center">
           <h2>COMPANY</h2>
           <ul className="menu-list">
-            <a href="https://food-del-frontend1-5l6a.onrender.com">Home</Link></a>
+            <a href="https://food-del-frontend1-5l6a.onrender.com">Home</a>
             <a href='#about us'>About Us</a>
             <a href='#delivary'>Delivary</a>
             <a href='#privacy'>Privacy Policy</a>
