@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 // MongoDB connection
 const connectDB = async () => {
-    await mongoose.connect('mongodb+srv://sulyman:560162@cluster0.cebizie.mongodb.net/foods').then(()=>console.log("Db connected"));
+    await mongoose.connect('mongodb+srv://sulyman:sulyman123@cluster0.cebizie.mongodb.net/foods').then(()=>console.log("Db connected"));
 }
 
 connectDB();
